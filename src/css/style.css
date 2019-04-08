@@ -19,6 +19,16 @@ body {
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
 
+/* Generic */
+
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Avatar */
+
 .avatar {
   margin-top: 64px;
   margin-bottom: 32px;
@@ -48,6 +58,8 @@ body {
   mix-blend-mode: hard-light;
 }
 
+/* About me */
+
 .hello {
   max-width: 392px;
   margin: auto;
@@ -73,10 +85,12 @@ body {
   border-top-color: transparent;
   left: 50%;
 }
+
 .hello::before {
   border-left-color: transparent;
   transform: translateX(-100%);
 }
+
 .hello::after {
   border-right-color: transparent;
 }
@@ -121,4 +135,80 @@ body {
 
 .social__about {
   font-size: 14px;
+}
+
+/* Jobs */
+.experience {
+  margin: 128px 0;
+}
+
+.experience__when {
+  display: inline-block;
+  position: relative;
+  margin: 32px 0;
+
+  color: #f0f;
+  font-size: 24px;
+  font-weight: 600;
+  text-rendering: optimizeLegibility;
+  z-index: 0;
+}
+
+.experience__when::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -0.5em;
+  width: 66.6666%;
+  height: 0.8em;
+
+  background-color: #2300ff;
+  z-index: -1;
+}
+
+.experience__body {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 24px;
+
+  background-color: #fff;
+  border-radius: 16px;
+  z-index: 0;
+}
+
+.experience__image {
+  display: block;
+  width: 96px;
+}
+
+.experience__content {
+  margin-left: 32px;
+  max-width: 540px;
+}
+
+.experience__title {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+/* Footer */
+.footer {
+  padding: 16px 0;
+
+  color: #fff;
+  font-size: 13px;
+  text-align: right;
+}
+
+@media (max-width: 575.98px) {
+  .experience__body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experience__content {
+    margin-top: 32px;
+    margin-left: 0;
+  }
 }
