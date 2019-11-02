@@ -43,11 +43,6 @@ body {
   background: linear-gradient(-45deg,#2300ff,#ff00ff);
   border-radius: 50%;
   border: 4px solid #fff;
-  box-shadow:
-  0 2px 8px -2px #ff00ff,
-  0 16px 64px -16px #ff00ff,
-  0 -2px 8px -2px #2300ff,
-  0 -16px 64px -16px #2300ff;
   
   overflow: hidden;
 }
@@ -55,7 +50,6 @@ body {
 .avatar__image {
   width: 100%;
   display: block;
-  mix-blend-mode: hard-light;
 }
 
 /* About me */
