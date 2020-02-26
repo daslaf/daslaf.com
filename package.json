@@ -1,0 +1,16 @@
+{
+  "name": "daslaf.com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "repository": "git@github.com:daslaf/daslaf.com.git",
+  "author": "Osman Cea <osman.cea@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve --input=src --output=_site",
+    "build": "npx @11ty/eleventy --input=src --output=_site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0"
+  }
+}
