@@ -7,8 +7,8 @@
   "author": "Osman Cea <osman.cea@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "npx @11ty/eleventy --serve --input=src --output=_site",
-    "build": "npx @11ty/eleventy --input=src --output=_site"
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy --output=dist"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0"

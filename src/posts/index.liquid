@@ -1,0 +1,32 @@
+---
+eleventyExcludeFromCollections: true
+layout: layout.liquid
+language: es
+description: Mi nombre es Osman Cea y soy un desarrollador frontend y diseñador web establecido en Santiago, Chile.
+---
+
+<div style="color: white;">
+    <h1>Blog</h1>
+    
+    <h2>2020</h2>
+    <ul>
+        {%- for post in collections['2020'] -%}
+            <li>
+                <a href="{{ post.data.page.url }}">
+                    {{ post.data.title }}
+                </a>
+            </li>
+        {%- endfor -%}
+    </ul>
+    
+    <h2>2018</h2>
+    <ul>
+        {%- for post in collections['2018'] -%}
+            <li>
+                <a href="{{ post.data.page.url }}">
+                    {{ post.data.title }}
+                </a>
+            </li>
+        {%- endfor -%}
+    </ul>
+</div>

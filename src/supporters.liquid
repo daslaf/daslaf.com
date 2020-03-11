@@ -1,0 +1,206 @@
+---
+layout: layout.liquid
+language: es
+description: Mi nombre es Osman Cea y soy un desarrollador frontend y diseñador web establecido en Santiago, Chile.
+---
+<style>
+  .patreon-page { color: #fff }
+
+  .patreon-page__members,
+  .patreon-page__cta {
+    margin: 4rem auto 2rem;
+    max-width: 40rem;
+    position: relative;
+  }
+  .patreon-page__header {
+    margin: 2.5rem 0;
+
+    font-weight: 600;
+    line-height: 2rem;
+    text-align: left;
+    z-index: 2;
+  }
+  .patreon-page__title {
+    position: relative;
+
+    color: var(--magenta);
+    font-family: var(--mono);
+    font-size: 1.5rem;
+  }
+  .patreon-page__title::before {
+    content: "";
+    position: absolute;
+    top: 25%;
+    left: -1rem;
+    height: 80%;
+    width: 40%;
+
+    background-color: var(--blue);
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+  .patreon-page__subtitle {
+    color: var(--purple);
+    font-family: var(--mono);
+    font-size: 1rem;
+  }
+  .patreon-page__content {
+    margin: 2.5rem 0;
+    padding: 1rem;
+    
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: var(--glow-box);
+    color: var(--black);
+    font-size: var(--font-small);
+    text-align: center;
+  }
+  .patreon-page__question {
+    margin-bottom: 0.75rem;
+
+    font-family: var(--mono);
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .patreon-page__answer {
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 1.5rem;
+    background-color: rgba(0,0,0,0.025);
+    border-left: .25rem solid rgba(0,0,0,0.05);
+    text-align: left;
+  }
+  .patreon-page__read-more {
+    font-family: var(--sans);
+    -webkit-appearance: none;
+    color: var(--blue);
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    font-size: 0.75rem;
+  }
+  .patreon-page__answer p + p {
+    margin-top: 0.5rem;
+  }
+  .patreon-page__to-patreon {
+    display: inline-block;
+    margin-bottom: .5rem;
+    padding: 0.5rem;
+
+    color: var(--blue);
+    font-family: var(--mono);
+    font-size: var(--font-small);
+    transition: all 195ms ease;
+  }
+  .patreon-page__to-patreon:hover {
+    transform: scale(1.1);
+  }
+
+  .patreon-members {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .patreon-members__avatar {
+    display: block;
+    height: 7.5rem;
+    width: 7.5rem;
+    margin: 0 auto;
+
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .patreon-members__image {
+    display: block;
+    width: 100%;
+  }
+</style>
+
+<div class="patreon-page">
+  <article class="patreon-page__cta">
+    <hgroup class="patreon-page__header">
+      <h1 class="patreon-page__title">Apóyame en Patreon...</h1>
+      <h2 class="patreon-page__subtitle">O no, es completamente opcional 🙂</h2>
+    </hgroup>
+
+    <div class="patreon-page__content">
+      <p class="patreon-page__question">¿Por qué estoy en Patreon?</p>
+      <div class="patreon-page__answer">
+        <p>Soy partidario de la democratización del conocimiento. También odio la publicidad. Igualmente me siento en deuda con mucha gente que me ayudó incondicionalmente durante mis años de formación en el colegio (pretendo explayarme sobre esto próximamente).</p>
+        <button class="patreon-page__read-more">Seguir leyendo</button>
+        <template>
+          <p>Una de las formas que se me ocurre para pagar esa deuda simbólica, es dando acceso libre a todo el material de corte educativo que produzca en el corto y mediano plazo, ya sean artículos, videos, transmisiones en vivo, etcétera. Compartir mi conocimiento es la mejor forma que se me ocurre de ayudar.</p>
+          <p>No voy a poner publicidad en los videos ni artículos, ni te voy a trackear mientras navegues en esta página.</p>
+          <p>Por estas razones creo que Patreon es una buena forma de valorizar mi trabajo. En mi página de Patreon no ofrezco absolutamente nada (salvo una mención en esta página) para quienes decidan ayudarme. Yo pretendo seguir publicando artículos y produciendo material, porque es algo que me encanta hacer, incluso si no tiene una retribución económica.</p>
+          <p>Si crees que lo que hago es de ayuda y estás en la posición y con la disposición de apoyarme, te lo agradezco mucho.</p>
+        </template>
+      </div>
+      
+      <p class="patreon-page__question">Hablas del corto/mediano plazo ¿Significa que eventualmente las cosas pueden cambiar?</p>
+      <div class="patreon-page__answer">
+        <p>Sí. Eventualmente todas las cosas pueden cambiar. No tengo idea de qué va a suceder en el futuro, pero dada mi situación familiar, mi foco principal está en proveer y apoyar económicamente a mi familia por medio de mi trabajo (actualmente en Cornershop).</p>
+        <button class="patreon-page__read-more">Seguir leyendo</button>
+        <template>
+          <p>Mientras mi fuente de ingreso principal sea por medio de mi trabajo (que me encanta), voy a realizar contenido como una actividad extra.</p>
+          <p>Puede ser que en algún momento quiera dedicarme 100% a realizar material educativo (aunque siendo honesto, es muy probable que no). En ese caso tendría que evaluar las condiciones bajo las que produzco dicho material.</p>
+          <p>Dudo que esto vaya a suceder en un futuro cercano. Hasta entonces, todo seguirá tal cuál.</p>
+        </template>
+      </div>
+
+      <a
+        class="patreon-page__to-patreon"
+        href="https://www.patreon.com/daslaf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Quiero aportar &gt;
+      </a>  
+    </div>
+  </article>
+
+  <article class="patreon-page__members">
+    <hgroup class="patreon-page__header">
+      <h1 class="patreon-page__title">Patroncitos</h1>
+      <h2 class="patreon-page__subtitle">Que el pulento los guarde en su gloria 🙏🏽</h2>
+    </hgroup>
+
+    <ul class="patreon-members">
+      {%- for patron in patrons %}
+        <li>
+          <figure class="patreon-members__avatar avatar__wrapper">
+            <img
+              class="patreon-members__image"
+              src="{{ patron.image_url  }}"
+              alt="Avatar de {{ patron.name }}"
+            />
+          </figure>
+          <p>{{ patron.name }}</p>
+          {%- for item in patron.social %}
+            <a class="social__link" href="{{ item.url }}">
+              <span class="social__name">{{ item.title }}</span>
+            </a>
+          {% endfor -%}
+        </li>
+      {% endfor -%}
+    </ul>
+  </article>
+</div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', event => {
+    const $readMore = document.querySelectorAll('.patreon-page__read-more');
+
+    $readMore.forEach(($elem, _, parent) => {
+      function showMore(event) {
+        const template = $elem.nextElementSibling;
+        const content = template.content.cloneNode(true);
+
+        $elem.replaceWith(content);
+      }
+
+      $elem.addEventListener('click', showMore, { once: true })
+    })
+  });
+</script>
