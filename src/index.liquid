@@ -1,0 +1,30 @@
+---
+eleventyExcludeFromCollections: true
+layout: layout.liquid
+language: es
+description: Mi nombre es Osman Cea y soy un desarrollador frontend y diseñador web establecido en Santiago, Chile.
+---
+
+<section id="about-me">
+  <figure class="avatar">
+    <div class="avatar__wrapper">
+      <img
+        class="avatar__image"
+        alt="Osman Cea"
+        src="/assets/img/me.jpeg"
+      />
+    </div>
+  </figure>
+
+  <div class="card hello">
+    <h2 class="hello__title">¡Hola! 👋</h2>
+    <h1 class="hello__text">Mi nombre es Osman Cea y soy un ingeniero de software y desarrollador frontend establecido en Santiago de Chile.</h1>
+    <p class="hello__text">Me encanta la música intrincada, JavaScript, el software libre y abierto y el aprendizaje continuo.</p>
+
+    <p class="hello__text">Me puedes encontrar en:</p>
+
+    {% include social %}
+  </div>
+</section>
+
+{% include latest_post %}

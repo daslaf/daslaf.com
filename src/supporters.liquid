@@ -1,0 +1,96 @@
+---
+layout: layout.liquid
+language: es
+description: Mi nombre es Osman Cea y soy un desarrollador frontend y diseñador web establecido en Santiago, Chile.
+---
+
+<div class="patreon-page">
+  <article class="patreon-page__cta">
+    <hgroup class="page__header">
+      <h1 class="page__title page__title--main">Apóyame en Patreon...</h1>
+      <h2 class="page__subtitle">O no, es completamente opcional 🙂</h2>
+    </hgroup>
+
+    <div class="card patreon-page__content">
+      <p class="patreon-page__question">¿Por qué estoy en Patreon?</p>
+      <div class="patreon-page__answer">
+        <p>Soy partidario de la democratización del conocimiento. También odio la publicidad. Igualmente me siento en deuda con mucha gente que me ayudó incondicionalmente durante mis años de formación en el colegio (pretendo explayarme sobre esto próximamente).</p>
+        <button class="patreon-page__read-more">Seguir leyendo</button>
+        <template>
+          <p>Una de las formas que se me ocurre para pagar esa deuda simbólica, es dando acceso libre a todo el material de corte educativo que produzca en el corto y mediano plazo, ya sean artículos, videos, transmisiones en vivo, etcétera. Compartir mi conocimiento es la mejor forma que se me ocurre de ayudar.</p>
+          <p>No voy a poner publicidad en los videos ni artículos, ni te voy a trackear mientras navegues en esta página.</p>
+          <p>Por estas razones creo que Patreon es una buena forma de valorizar mi trabajo. En mi página de Patreon no ofrezco absolutamente nada (salvo una mención en esta página) para quienes decidan ayudarme. Yo pretendo seguir publicando artículos y produciendo material, porque es algo que me encanta hacer, incluso si no tiene una retribución económica.</p>
+          <p>Si crees que lo que hago es de ayuda y estás en la posición y con la disposición de apoyarme, te lo agradezco mucho.</p>
+        </template>
+      </div>
+      
+      <p class="patreon-page__question">Hablas del corto/mediano plazo ¿Significa que eventualmente las cosas pueden cambiar?</p>
+      <div class="patreon-page__answer">
+        <p>Sí. Eventualmente todas las cosas pueden cambiar. No tengo idea de qué va a suceder en el futuro, pero dada mi situación familiar, mi foco principal está en proveer y apoyar económicamente a mi familia por medio de mi trabajo (actualmente en <a href="https://cornershopapp.com" target="_blank" rel="noopener noreferrer" >Cornershop</a>).</p>
+        <button class="patreon-page__read-more">Seguir leyendo</button>
+        <template>
+          <p>Mientras mi fuente de ingreso principal sea por medio de mi trabajo (que me encanta), voy a realizar contenido como una actividad extra.</p>
+          <p>Puede ser que en algún momento quiera dedicarme 100% a realizar material educativo (aunque siendo honesto, es muy probable que no). En ese caso tendría que evaluar las condiciones bajo las que produzco dicho material.</p>
+          <p>Dudo que esto vaya a suceder en un futuro cercano. Hasta entonces, todo seguirá tal cuál.</p>
+        </template>
+      </div>
+
+      <a
+        class="patreon-page__to-patreon"
+        href="https://www.patreon.com/daslaf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Llévame a Patreon &gt;
+      </a>  
+    </div>
+  </article>
+
+  <article class="patreon-page__members">
+    <hgroup class="page__header">
+      <h1 class="page__title">Patroncitos</h1>
+      <h2 class="page__subtitle">Las siguientes personas han decidido ayudarme via Patreon.<br>Que el pulento los guarde en su gloria 🙏</h2>
+    </hgroup>
+
+    <ul class="patreon-members">
+      {%- for patron in patrons %}
+        <li>
+          <div class="patreon-members__patron">
+            <figure class="patreon-members__avatar avatar__wrapper">
+              <img
+                class="patreon-members__image"
+                src="{{ patron.image_url  }}"
+                alt="Avatar de {{ patron.name }}"
+              />
+            </figure>
+            <div class="patreon-members__name">
+              <p class="patreon-members__name-text">{{ patron.name }}</p>
+            </div>
+            {%- for item in patron.social %}
+              <a class="patreon-members__social-link" href="{{ item.url }}">
+                {{ item.title }}
+              </a>
+            {% endfor -%}
+          </div>
+        </li>
+      {% endfor -%}
+    </ul>
+  </article>
+</div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', event => {
+    const $readMore = document.querySelectorAll('.patreon-page__read-more');
+
+    $readMore.forEach(($elem, _, parent) => {
+      function showMore(event) {
+        const template = $elem.nextElementSibling;
+        const content = template.content.cloneNode(true);
+
+        $elem.replaceWith(content);
+      }
+
+      $elem.addEventListener('click', showMore, { once: true })
+    })
+  });
+</script>
