@@ -1,0 +1,28 @@
+{% assign post = collections['post'] | last %}
+{% assign words = post.templateContent | strip | split: " " %}
+{% assign estimated_time = words.size | divided_by: 200 | round %}
+
+{% if estimated_time == 0 %}
+    {% assign estimated_read_time = "Menos de 1 minuto" %}
+{% elsif estimated_time == 1 %}
+    {% assign estimated_read_time = "1 minuto" %}
+{% else %}
+    {% capture estimated_read_time %}{{ estimated_time }} minutos{% endcapture %}
+{% endif %}
+
+<article>
+    <a class="card post-tile" href="{{ post.data.page.url }}">
+        <p class="post-tile__cta"><span role="img">🎉</span> Revisa mi último artículo</p>
+        <figure class="post-tile__thumbnail" role="img" style="background-image: url('{{ post.data.cover_image_thumbnail }}');"></figure>
+        <div class="post-tile__content">
+            <div class="post-tile__body">
+                <h2 class="post-tile__title">{{ post.data.title }}</h1>
+                <h3 class="post-tile__subtitle">{{ post.data.subtitle }}</h2>
+                    <p class="post-tile__meta">
+                        <b>Publicado:</b> {{ post.data.date | date: "%e/%m/%Y" }} · <b>Tiempo de lectura:</b> {{ estimated_read_time }}
+                    </p>
+            </div>
+            <span class="post-tile__caret"></span>
+        </div>
+    </a>
+</article>

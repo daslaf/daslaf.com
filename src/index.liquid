@@ -1,4 +1,5 @@
 ---
+eleventyExcludeFromCollections: true
 layout: layout.liquid
 language: es
 description: Mi nombre es Osman Cea y soy un desarrollador frontend y diseñador web establecido en Santiago, Chile.
@@ -15,13 +16,15 @@ description: Mi nombre es Osman Cea y soy un desarrollador frontend y diseñador
     </div>
   </figure>
 
-  <div class="hello">
-    <h2 class="hello__title">¡Hola!👋</h2>
-    <h1 class="hello__text">Mi nombre es Osman Cea (<em>aka</em> Daslaf) y soy un ingeniero de software y desarrollador frontend establecido en Santiago, Chile.</h1>
-    <p class="hello__text">Me encanta la música pretenciosa, JavaScript, el software libre y abierto y el aprendizaje continuo.</p>
+  <div class="card hello">
+    <h2 class="hello__title">¡Hola! 👋</h2>
+    <h1 class="hello__text">Mi nombre es Osman Cea y soy un ingeniero de software y desarrollador frontend establecido en Santiago de Chile.</h1>
+    <p class="hello__text">Me encanta la música intrincada, JavaScript, el software libre y abierto y el aprendizaje continuo.</p>
 
-    <p class="hello__text">Puedes encontrarme en:</p>
+    <p class="hello__text">Me puedes encontrar en:</p>
 
     {% include social %}
   </div>
 </section>
+
+{% include latest_post %}

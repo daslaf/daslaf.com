@@ -1,6 +1,6 @@
 module.exports = [
   {
-    name: 'Nicolás Avila',
+    name: 'Nicolás Ávila',
     patreon_id: 31100919,
     image_url: '/assets/img/patrons/navila_avatar.jpg',
     social: [
