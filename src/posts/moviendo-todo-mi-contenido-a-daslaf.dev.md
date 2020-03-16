@@ -4,10 +4,11 @@ tags:
     - post
     - '2020'
 title: Moviendo ¿casi? todo a daslaf.dev
+description: Eventualmente todo mi contenido terminará aquí
 subtitle: Adiós Medium, que la fuerza te acompañe
 date: '2020-03-13'
-cover_image: /assets/img/waving_kitten.jpg
-cover_image_thumbnail: /assets/img/waving_kitten_thumbnail.jpg
+cover_image: /assets/img/covers/waving_kitten.jpg
+cover_image_thumbnail: /assets/img/covers/waving_kitten_thumbnail.jpg
 cover_image_author: Alain Pham
 cover_image_author_username: alain_pham
 ---

@@ -1,16 +1,27 @@
 <!DOCTYPE html>
-<html lang="{{ language }}">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Osman Cea</title>
+
+  {%- capture page_title -%}{% if title %}{{ title }} - Osman Cea{% else %}Osman Cea{% endif -%}{%- endcapture -%}
+  <title>{{ page_title }}</title>
+
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
   <meta name="description" content="{{ description  }}" />
   <meta name="keywords" content="osman cea, osmancea, daslaf, web, frontend, developer, designer, javascript, css"/>
-  <meta name="twitter:site" content="@daslaf">
-  <meta name="twitter:creator" content="@daslaf">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="{{ page_title }}" />
+  <meta name="twitter:description" content="{{ description }}" />
+  <meta name="twitter:site" content="@daslaf" />
+  <meta name="twitter:creator" content="@daslaf" />
+
+  {% if canonical_url %}
+  <!-- Add canonical url when needed -->
+  <link rel="canonical" href="{{ canonical_url }}" />
+  {% endif %}
 
   <!-- Styles -->
   <style>

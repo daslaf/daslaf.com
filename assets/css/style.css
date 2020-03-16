@@ -42,6 +42,7 @@ a {
 code[class*=language-], pre[class*=language-], code {
   font-family: var(--mono);
   font-size: var(--font-small);
+  line-height: 1.5;
 }
 
 /* Generic */
@@ -427,6 +428,7 @@ code[class*=language-], pre[class*=language-], code {
   width: 100%;
   height: 100%;
   background-image: linear-gradient(360deg, var(--background), transparent);
+  mix-blend-mode: overlay;
 }
 
 .post-tile__title {
@@ -533,7 +535,6 @@ code[class*=language-], pre[class*=language-], code {
   margin: 0 -2rem;
   padding: 2rem;
   width: calc(100% + 4rem);
-
   box-shadow: none;
   color: var(--black);
 }
@@ -542,16 +543,24 @@ code[class*=language-], pre[class*=language-], code {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+
 .post-page__content h3 {
   margin-top: 2rem;
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-.post-page__content h3 + h4 {
+.post-page__content h4 {
+  margin-top: 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.post-page__content h3+h4 {
+  margin-top: 0;
+  color: var(--grey);
   font-size: 1.25rem;
   font-weight: 400;
-  color: var(--grey);
 }
 
 .post-page__content ul {
@@ -563,9 +572,36 @@ code[class*=language-], pre[class*=language-], code {
   font-style: italic;
 }
 
-.post-page__content b,
-.post-page__content strong {
+.post-page__content b, .post-page__content strong {
   font-weight: 600;
+}
+
+.post-page__content blockquote, .post-page__content q {
+  padding-left: .75rem;
+  border-left: 0.25rem solid rgba(0, 0, 0, 0.1);
+}
+
+.post-page__content figure {
+  margin: 1.5rem auto;
+  text-align: center;
+}
+.post-page__content figure img {
+  display: block;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+.post-page__content figure figcaption {
+  margin-top: 0.5rem;
+  color: var(--grey);
+  font-size: var(--font-small);
+}
+
+.post-page__content .link-to-canonical {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  padding: .75rem 1rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: .5rem;
 }
 
 .post-page__content .media {
@@ -575,11 +611,9 @@ code[class*=language-], pre[class*=language-], code {
   padding-bottom: 56.25%;
 }
 
-.post-page__content p code,
-.post-page__content li code {
+.post-page__content p code, .post-page__content li code {
   padding: .125rem .25rem;
-
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 0.25rem;
   color: var(--purple);
   font-size: 80%;
@@ -587,14 +621,13 @@ code[class*=language-], pre[class*=language-], code {
 }
 
 .post-page__content pre[class*="language-"] {
-  margin: 1rem -2rem;
-  padding: 1rem 2rem; 
+  margin: 1.5rem -2rem;
+  padding: 1.25rem 2rem;
 }
 
 .post-page__content hr {
   width: 3rem;
   margin: 2rem auto;
-
   border: 0;
   color: var(--grey);
   font-size: 2rem;
