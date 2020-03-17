@@ -375,7 +375,6 @@ code[class*=language-], pre[class*=language-], code {
 .post-tile {
   display: block;
   margin: 3rem auto;
-  padding: 0;
   box-shadow: none;
   text-decoration: none;
   transition: transform .15s ease-in-out, box-shadow .15s ease-in-out;
@@ -387,20 +386,15 @@ code[class*=language-], pre[class*=language-], code {
 }
 
 .post-tile__cta {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  padding: 0.25rem 0.75rem;
-  background-color: var(--white);
-  border-radius: .5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px dashed rgba(0,0,0,0.25);
   color: var(--purple);
   font-size: var(--font-small);
   font-weight: 600;
-  z-index: 1;
 }
 
 .post-tile__content {
-  padding: 1rem;
   display: flex;
   align-items: center;
 }
@@ -412,7 +406,10 @@ code[class*=language-], pre[class*=language-], code {
 .post-tile__thumbnail {
   position: relative;
   height: 0;
-  width: 100%;
+  top: -1rem;
+  left: -1rem;
+  right: -1rem;
+  width: calc(100% + 2rem);
   padding-bottom: 28.125%;
   background-position: center;
   background-repeat: no-repeat;
