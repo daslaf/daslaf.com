@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600|Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&family=Nunito:wght@400;600&family=Roboto+Mono:wght@500&display=swap');
+
 :root {
   --background: #09062e;
   --black: #444444;
@@ -11,6 +12,7 @@
   --white: #ffffff;
   --mono: 'Roboto Mono', 'Courier New', Courier, monospace;
   --sans: 'Nunito', Arial, Helvetica, sans-serif;
+  --serif: 'Noto Serif', Georgia, Cambria, Cochin, Times, 'Times New Roman', serif;
   --font-small: 0.875rem;
   --font-smallest: 0.75rem;
   --glow-box: 0 0.5rem 2rem -0.5rem var(--magenta), 0 -0.5rem 2rem -0.5rem var(--blue);
@@ -435,7 +437,6 @@ code[class*=language-], pre[class*=language-], code {
 
 .post-tile__subtitle {
   color: var(--grey);
-  font-size: var(--font-small);
 }
 
 .post-tile__meta {
@@ -506,6 +507,7 @@ code[class*=language-], pre[class*=language-], code {
 
 .post-page__header {
   margin-bottom: 3rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .post-page__title {
@@ -573,9 +575,27 @@ code[class*=language-], pre[class*=language-], code {
   font-weight: 600;
 }
 
-.post-page__content blockquote, .post-page__content q {
+.post-page__content blockquote,
+.post-page__content q {
   padding-left: .75rem;
   border-left: 0.25rem solid rgba(0, 0, 0, 0.1);
+  font-family: var(--serif);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.post-page__content blockquote p,
+.post-page__content q p {
+  margin: 0;
+}
+.post-page__content blockquote p:first-of-type,
+.post-page__content q p:first-of-type {
+  margin-top: -1rem;
+}
+.post-page__content blockquote p:last-of-type,
+.post-page__content q p:last-of-type {
+  margin-bottom: -1rem;
 }
 
 .post-page__content figure {
@@ -593,7 +613,8 @@ code[class*=language-], pre[class*=language-], code {
   font-size: var(--font-small);
 }
 
-.post-page__content .link-to-canonical {
+.post-page__content .link-to-canonical,
+.post-page__content .disclaimer {
   margin-top: 0;
   margin-bottom: 2rem;
   padding: .75rem 1rem;
@@ -608,13 +629,74 @@ code[class*=language-], pre[class*=language-], code {
   padding-bottom: 56.25%;
 }
 
+.post-page__content .vapor {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  position: relative;
+
+  color: var(--magenta);
+  font-weight: 600;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.post-page__content .vapor span {
+  animation: neonGlow 1s infinite alternate cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+
+.post-page__content .vapor::before,
+.post-page__content .vapor::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  letter-spacing: 0;
+}
+
+.post-page__content .vapor::before {
+  content: "✨🌟";
+  left: 0;
+}
+
+.post-page__content .vapor::after {
+  content: "🌟✨";
+  right: 0;
+}
+
+@keyframes neonGlow {
+  0% {
+    text-shadow: 
+      0 0 5px rgba(255,255,255,.8),
+      0 0 10px rgba(255,255,255,.8),
+      0 0 11px  rgba(255,255,255,.8),
+      0 0 20px  rgba(255, 0, 255, .8),
+      0 0 30px  rgba(255, 0, 255, .8),
+      0 0 40px  rgba(255, 0, 255,.5),
+      0 0 50px rgba(255, 0, 255,.5),
+      0 0 70px rgba(255, 0, 255,.5),
+      0 0 100px rgba(255, 0, 255,.5);
+  }
+  100% {
+    text-shadow: 
+      0 0 1px rgba(255,255,255,.8),
+      0 0 4px rgba(255,255,255,.8),
+      0 0 5px rgba(255,255,255,.8),
+      0 0 10px rgba(255, 0, 255, .8),
+      0 0 15px rgba(255, 0, 255, .8),
+      0 0 20px rgba(255, 0, 255, .8),
+      0 0 25px rgba(255, 0, 255,.5),
+      0 0 40px rgba(255, 0, 255,.5);
+  }
+}
+
 .post-page__content p code, .post-page__content li code {
   padding: .125rem .25rem;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 0.25rem;
   color: var(--purple);
   font-size: 80%;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .post-page__content pre[class*="language-"] {
