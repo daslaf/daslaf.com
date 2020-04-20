@@ -2,7 +2,7 @@
 layout: layout.liquid
 ---
 {% assign words = content | strip | split: " " %}
-{% assign estimated_time = words.size | divided_by: 200 | round %}
+{% assign estimated_time = words.size | divided_by: 300 | round %}
 
 {% if estimated_time == 0 %}
     {% assign estimated_read_time = "Menos de 1 minuto" %}

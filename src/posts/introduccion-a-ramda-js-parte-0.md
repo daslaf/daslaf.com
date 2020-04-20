@@ -2,7 +2,6 @@
 layout: post_layout.liquid
 tags:
     - post
-    - '2019'
 title: Introducción a Ramda.js - Parte 0
 description: Funciones puras, currying, aplicación parcial e inmutabilidad
 subtitle: Conceptos generales sobre programación funcional

@@ -2,7 +2,6 @@
 layout: post_layout.liquid
 tags:
     - post
-    - '2020'
 title: Moviendo ¿casi? todo a daslaf.dev
 description: Eventualmente todo mi contenido terminará aquí
 subtitle: Adiós Medium, que la fuerza te acompañe
