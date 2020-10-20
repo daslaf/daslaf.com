@@ -23,7 +23,7 @@
 }
 
 html, body {
-  font: 16px/1.45 var(--sans);
+  font: 18px/1.45 var(--sans);
 }
 
 body {
@@ -541,6 +541,8 @@ code[class*=language-], pre[class*=language-], code {
 .post-page__content p {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.47;
 }
 
 .post-page__content h3 {
@@ -701,7 +703,7 @@ code[class*=language-], pre[class*=language-], code {
 
 .post-page__content pre[class*="language-"] {
   margin: 1.5rem -2rem;
-  padding: 1.25rem 2rem;
+  padding: 2rem 2rem 2.5rem;
 }
 
 .post-page__content hr {
