@@ -33,11 +33,11 @@ layout: layout.liquid
 
 <article class="post-page">
     <hgroup class="post-page__header">
-        <h1 class="post-page__title">{{ title }}</h1>
-        <h2 class="post-page__subtitle">{{ subtitle }}</h2>
+        <h1 class="post-page__title"><span>{{ title }}</span></h1>
+        <h2 class="post-page__subtitle"><span>{{ subtitle }}</span></h2>
     
         <p class="post-page__meta">
-            <b>Publicado:</b> {{ date | date: "%e/%m/%Y" }} · <b>Tiempo de lectura:</b> {{ estimated_read_time }}
+            <b>Publicado:</b> <span>{{ date | date: "%e/%m/%Y" }} ·</span> <b>Tiempo de lectura:</b> <span>{{ estimated_read_time }}</span>
         </p>
     </hgroup>
 
