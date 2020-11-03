@@ -12,7 +12,9 @@ cover_image_author: Kimberly Eschenbauch
 cover_image_author_username: kimberlyeschenbauchphotography
 ---
 
-Hace unos días estuve en la BeerJS Valdivia hablando sobre cómo modelar efectos secundarios en React utilizando RxJS. Hacia el final de la charla, que puedes ver por [acá](https://youtu.be/F2SOzMPCGC8?t=2248), surgió una pregunta sobre qué formas podrían existir para manejar el estado de una aplicación con RxJS.
+Hace unos días estuve en el meetup de [BeerJS Valdivia](https://valdivia.beerjs.cl/) hablando sobre cómo modelar efectos secundarios en React utilizando RxJS. Hacia el final de la charla, que puedes ver por [acá](https://youtu.be/F2SOzMPCGC8?t=2248), surgió una pregunta sobre qué formas podrían existir para manejar el estado de una aplicación con RxJS.
+
+Pues a partir de esa pregunta me he quedado pensando y qué mejor forma que responderla escribiendo un artículo.
 
 > En esta serie de artículos vamos a explorar 3 formas en las que podemos hacer manejo de estado utilizando RxJS.
 
@@ -24,9 +26,9 @@ Hace unos días estuve en la BeerJS Valdivia hablando sobre cómo modelar efecto
 
 ### Creando un Store a la redux.
 
-Pues una de las formas más comunes de manejar estados con RxJS es implementando un *Store* que almacenará el estado de nuestra aplicación. Podemos enviar comandos a nuestro *Store* y modificar el estado interno utilizando un *reducer*, que no es más que una función pura, que va a describir cómo el estado de la aplicación se transforma según el comando o acción que haya sido emitido.
+Pues una de las formas más comunes de manejar estados con RxJS es implementando un *Store* que almacenará el estado de nuestra aplicación. Podemos enviar comandos a nuestro *Store* y modificar su estado interno utilizando un *reducer*, que no es más que una función pura que va a describir cómo el estado de la aplicación se transformará según el comando o acción que haya sido emitido.
 
-Para esto podemos utilizar un `BehaviorSubject` de `rxjs`, que es una especie de `EventEmitter` en esteroide:
+Para esto podemos utilizar un `BehaviorSubject` de `rxjs`, que es una especie de `EventEmitter` en esteroides:
 
 - Un `BehaviorSubject` es *multicast*, es decir, puede tener múltiples suscriptores.
 - Cada vez que un observador se suscribe al `BehaviorSubject`, es notificado de forma síncrona sobre el último valor emitido por el sujeto. Gracias a esto nos aseguramos que todos los observadores del sujeto estén actualizados con el estado actual.
@@ -90,7 +92,7 @@ counterStore.dispatch({ type: 'DECREMENT' }); // Count A :: 2
 
 Veamos paso a paso la implementación de `createStore`.
 
-Para crear nuestro store necesitamos un valor inicial y una función (un *reducer*), que se encargará de describir las transiciones de estado en el *Store*.
+Para crear nuestro *Store* necesitamos un valor inicial y una función (un *reducer*) que se encargará de describir las transiciones de estado en él.
 
 Inicializamos nuestro `BehaviorSubject` utilizando `initialValue` como valor inicial:
 
@@ -101,7 +103,7 @@ function createStore(initialValue, reducer) {
 }
 ```
 
-A continuación definimos un método `subscribe`, que recibe como parámetro un observador. Internamente nos suscribimos al `BehaviorSubject` y cada vez que se emita un nuevo valor en este, propagaremos ese valor al observador que recibimos como parámetro. Esto nos permite almacenar una referencia al último valor emitido, que va a ser necesaria cuando llamemos al método `dispatch` para calcular el nuevo estado del *Store*:
+A continuación definimos un método `subscribe`, que recibe como parámetro un observador. Internamente nos suscribimos al `BehaviorSubject` y cada vez que este emita un nuevo valor, propagaremos ese valor al observador que recibimos como parámetro. Esto nos permite almacenar una referencia al último valor emitido, que va a ser necesaria cuando llamemos al método `dispatch` para calcular el nuevo estado del *Store*:
 
 ```javascript
 function createStore(initialValue, reducer) {
@@ -124,7 +126,7 @@ function createStore(initialValue, reducer) {
 }
 ```
 
-Finalmente implementamos `dispatch` como una función que toma como argumento una acción y ejecuta el `reducer` utilizando `previousState` (que guardamos cada vez que un valor nuevo se emite en el `BehaviorSubject`) y la acción para calcular el nuevo estado de nuestro sujeto. Despachamos el valor nuevo utilizando el método `next` de nuestro sujeto.
+Finalmente implementamos `dispatch` como una función que toma como argumento una acción y ejecuta el `reducer` utilizando `previousState` (que guardamos cada vez que un valor nuevo se emite en el `BehaviorSubject`) y la acción para calcular el nuevo estado de nuestro sujeto. Despachamos el estado nuevo utilizando el método `next` de nuestro sujeto.
 
 ```javascript
 function createStore(initialValue, reducer) {
@@ -149,7 +151,9 @@ function createStore(initialValue, reducer) {
 }
 ```
 
-Y *voilá*. Como puedes ver, una implementación mínima de un *Store* a la redux es posible utilizando una estructura como `BehaviorSubject`, que nos permite almacenar estado y propagar los cambios por medio de una estrategia de tipo *push*. Algo muy importante y que nos permite utilizar este *approach* es que, como mencionamos, el `BehaviorSubject` es *multicast*. Ya veremos en el próximo ejemplo por qué esto es importante.
+Y *voilá*. Como puedes ver, una implementación mínima de un *Store* a la redux es posible utilizando una estructura como `BehaviorSubject`, que nos permite almacenar estado y propagar los cambios por medio de una estrategia de tipo *push*. Algo muy importante y que nos permite utilizar este *approach* es que, como mencionamos, el `BehaviorSubject` es *multicast*.
+
+Ya veremos en los próximos artículos por qué esto es tan importante.
 
 ---
 
