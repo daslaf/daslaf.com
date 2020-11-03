@@ -568,6 +568,10 @@ code[class*=language-], pre[class*=language-], code {
   list-style: disc;
 }
 
+.post-page__content li {
+  font-size: 0.9rem;
+}
+
 .post-page__content em {
   font-style: italic;
 }
@@ -864,6 +868,10 @@ code[class*=language-], pre[class*=language-], code {
   .social__name {
     font-weight: 600;
     color: var(--white);
+  }
+
+  .post-tile__subtitle {
+    color: var(--light-grey);
   }
 
   .post-tile__cta {
