@@ -30,7 +30,9 @@ description: Mi nombre es Osman Cea y soy un ingeniero de software y desarrollad
                 <div class="post-tile__content">
                     <div class="post-tile__body">
                         <h2 class="post-tile__title">{{ post.data.title }}</h1>
-                        <h3 class="post-tile__subtitle">{{ post.data.subtitle }}</h2>
+                        {% if post.data.subtitle %}
+                            <h3 class="post-tile__subtitle">{{ post.data.subtitle }}</h2>
+                        {% endif %}
                         <p class="post-tile__meta">
                             <b>Publicado:</b> {{ post.data.date | date: "%e/%m/%Y" }} · <b>Tiempo de lectura:</b> {{ estimated_read_time }}
                         </p>

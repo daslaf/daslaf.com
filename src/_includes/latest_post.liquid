@@ -17,10 +17,12 @@
         <div class="post-tile__content">
             <div class="post-tile__body">
                 <h2 class="post-tile__title">{{ post.data.title }}</h1>
+                {% if post.data.subtitle %}
                 <h3 class="post-tile__subtitle">{{ post.data.subtitle }}</h2>
-                    <p class="post-tile__meta">
-                        <b>Publicado:</b> {{ post.data.date | date: "%e/%m/%Y" }} · <b>Tiempo de lectura:</b> {{ estimated_read_time }}
-                    </p>
+                {% endif %}
+                <p class="post-tile__meta">
+                    <b>Publicado:</b> {{ post.data.date | date: "%e/%m/%Y" }} · <b>Tiempo de lectura:</b> {{ estimated_read_time }}
+                </p>
             </div>
             <span class="post-tile__caret"></span>
         </div>
