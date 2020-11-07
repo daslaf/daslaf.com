@@ -34,8 +34,10 @@ layout: layout.liquid
 <article class="post-page">
     <hgroup class="post-page__header">
         <h1 class="post-page__title"><span>{{ title }}</span></h1>
-        <h2 class="post-page__subtitle"><span>{{ subtitle }}</span></h2>
-    
+        {% if subtitle %}
+            <h2 class="post-page__subtitle"><span>{{ subtitle }}</span></h2>
+        {% endif %}
+
         <p class="post-page__meta">
             <b>Publicado:</b> <span>{{ date | date: "%e/%m/%Y" }} ·</span> <b>Tiempo de lectura:</b> <span>{{ estimated_read_time }}</span>
         </p>
