@@ -556,9 +556,8 @@ code[class*=language-], pre[class*=language-], code {
   font-weight: 600;
 }
 
-.post-page__content h3+h4 {
+.post-page__content h3 + h4 {
   margin-top: 0;
-  color: var(--grey);
   font-size: 1.25rem;
   font-weight: 400;
 }
@@ -674,7 +673,7 @@ code[class*=language-], pre[class*=language-], code {
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 0.25rem;
   color: var(--purple);
-  font-size: 80%;
+  font-size: 90%;
   font-weight: 500;
 }
 
@@ -821,6 +820,10 @@ code[class*=language-], pre[class*=language-], code {
     background-color: var(--white);
     background-image: linear-gradient(180deg, var(--almost-white), var(--white));
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), var(--shadow-box-reverse) !important;
+  }
+
+  .post-page__content h3 + h4 {
+    color: var(--grey);
   }
 
   .patreon-page__content {
