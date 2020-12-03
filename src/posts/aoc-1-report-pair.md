@@ -5,6 +5,7 @@ tags:
 title: AOC Día 1 - Report Repair
 subtitle: Resolviendo el desafío Advent of Code (AOC) en JavaScript
 description: Advent of Code (o Advenimiento de Código) es un calendario de advenimiento de pequeños desafíos de programación que pueden ser resueltos en cualquier lenguaje de programación.
+aoc_day: 1
 date: '2020-12-01'
 cover_image: /assets/img/covers/aoc.jpg
 cover_image_thumbnail: /assets/img/covers/aoc_thumbnail.jpg
@@ -12,13 +13,7 @@ cover_image_author: JESHOOTS.COM
 cover_image_author_username: jeshoots
 ---
 
-*Advent of Code* (o Advenimiento de Código) es un calendario de advenimiento de pequeños desafíos de programación que pueden ser resueltos en cualquier lenguaje de programación. Cada día y hasta el 25 de diciembre se publican 2 desafíos por [https://adventofcode.com/](https://adventofcode.com/).
-
-Este año he decidido participar y publicar las soluciones a cada desafío con explicaciones a fondo en mi blog.
-
-### Día 1: Report Repair
-
-<p class="disclaimer" style="margin-top: 1rem;">Puedes encontrar el enunciado completo del problema <a href="https://adventofcode.com/2020/day/1" target="_blank" rel="noopener noreferrer">aquí</a></p>
+{% include aoc_header %}
 
 El primer desafío de AOC consiste en calcular el producto de dos números en un listado cuya suma sea `2020`. Por ejemplo, consideremos el siguiente listado de números:
 
