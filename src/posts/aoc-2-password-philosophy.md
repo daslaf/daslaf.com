@@ -238,7 +238,7 @@ const countValidPasswords = input =>
 countValidPasswords(input); // 1
 ```
 
-Y listo, con esto hemos resuelto el segundo día de desafíos de Advent of Code.
+Y listo, con esto hemos resuelto el segundo día de desafíos de [#AdventOfCode](https://twitter.com/hashtag/AdventOfCode).
 
 ---
 

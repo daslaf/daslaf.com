@@ -153,7 +153,7 @@ function getThreeWayProduct(list) {
 }
 ```
 
-Y listo, con esto hemos resuelto el primer día de desafíos de Advent of Code. Si aplicamos nuestra función con la [data de entrada](https://adventofcode.com/2020/day/1/input) del desafío, obtenemos `288756720` como respuesta.
+Y listo, con esto hemos resuelto el primer día de desafíos de [#AdventOfCode](https://twitter.com/hashtag/AdventOfCode). Si aplicamos nuestra función con la [data de entrada](https://adventofcode.com/2020/day/1/input) del desafío, obtenemos `288756720` como respuesta.
 
 ---
 
