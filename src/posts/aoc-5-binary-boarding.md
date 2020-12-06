@@ -13,6 +13,8 @@ cover_image_author: CHUTTERSNAP
 cover_image_author_username: chuttersnap
 ---
 
+{% include aoc_header %}
+
 La primera parte del desafío nos pide encontrar el número de identificación más grande de un asiento dada la tarjeta de abordaje provista como input.
 
 En vez de utilizar un sistema de coordenadas, los números de asiento están codificados utilizando una partición binaria del espacio. El avión tiene 128 filas de asientos y 8 asientos (columnas) por fila.
