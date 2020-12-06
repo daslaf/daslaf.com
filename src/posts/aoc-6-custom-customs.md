@@ -7,8 +7,8 @@ subtitle: Resolviendo el desafío Advent of Code (AOC) en JavaScript
 description: Advent of Code (o Advenimiento de Código) es un calendario de advenimiento de pequeños desafíos de programación que pueden ser resueltos en cualquier lenguaje de programación.
 aoc_day: 6
 date: '2020-12-06'
-cover_image: /assets/img/covers/cb.jpg
-cover_image_thumbnail: /assets/img/covers/cb_thumbnail.jpg
+cover_image: /assets/img/covers/fallen_tree.jpg
+cover_image_thumbnail: /assets/img/covers/fallen_tree_thumbnail.jpg
 cover_image_author: Simon Berger
 cover_image_author_username: 8moments
 ---
