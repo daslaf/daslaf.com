@@ -17,7 +17,7 @@ cover_image_author_username: punttim
 
 El segundo desafío de AOC consiste en contar cuantos *passwords* válidos existen en un grupo de entradas. Consideremos la siguiente data:
 
-```
+```text
 1-3 a: abcde
 1-3 b: cdefg
 2-9 c: ccccccccc
@@ -240,7 +240,7 @@ countValidPasswords(input); // 1
 
 Y listo, con esto hemos resuelto el segundo día de desafíos de [#AdventOfCode](https://twitter.com/hashtag/AdventOfCode).
 
----
+___
 
 Si te ha gustado el contenido, no te olvides de darle una compartida en Twitter y seguirme por [ahí](https://twitter.com/daslaf).
 

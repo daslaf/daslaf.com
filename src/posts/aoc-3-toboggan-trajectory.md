@@ -19,7 +19,7 @@ El enunciado de este problema es bastane largo por lo que intentaré explicarlo 
 
 Consideremos la siguiente data de entrada:
 
-```
+```text
 ..##.......
 #...#...#..
 .#....#..#.
@@ -37,7 +37,7 @@ Los puntos (`.`) marcan los senderos y los signos gato (`#`) señalan donde hay 
 
 Recorreremos el patrón de forma constante, moviéndonos desde el punto de partida `3` espacios a la derecha y `1` hacia abajo. Dicho esto, podemos marcar todos los puntos que forman nuestra trayectoria en un diagrama, señalando con una `O` donde hay sendero (`.`) y con una `X` donde hay un árbol (`#`).
 
-```
+```text
 |- rep 1 -||- rep 2 -||- rep 3 -||-  etc  -|
 O.##.........##.........##....... -------->
 #..O#...#..#...#...#..#...#...#..
@@ -173,27 +173,27 @@ function run(input) {
   // Definimos una función que nos ayudará a recorrer fila por fila
   // nuestro mapa
   function goToNextRow(rows, colPosition, foundTrees) {
-      // Si ya no quedan filas por recorrer, retornamos los árboles
-      // encontrados
-      if (!rows[0]) return foundTrees;
+    // Si ya no quedan filas por recorrer, retornamos los árboles
+    // encontrados
+    if (!rows[0]) return foundTrees;
 
-      const content = rows[0][colPosition];
+    const content = rows[0][colPosition];
 
-      return goToNextRow(
-        // Como debemos movernos hacia la siguiente fila, básicamente
-        // estamos acortando el mapa por la cantidad determinada por Slope.Down
-        rows.slice(Slope.Down),
+    return goToNextRow(
+      // Como debemos movernos hacia la siguiente fila, básicamente
+      // estamos acortando el mapa por la cantidad determinada por Slope.Down
+      rows.slice(Slope.Down),
 
-        // Para calcular la posición de la columna en la que quedaremos,
-        // podemos usar el operador módulo. Si `colPosition + Slope.Right`
-        // es mayor o igual al ancho de la columna, significa que ya nos
-        // hemos desbordado del mapa por la derecha. El módulo nos dice 
-        // básicamente por cuantas casillas nos hemos desbordado.
-        (colPosition + Slope.Right) % colWidth,
+      // Para calcular la posición de la columna en la que quedaremos,
+      // podemos usar el operador módulo. Si `colPosition + Slope.Right`
+      // es mayor o igual al ancho de la columna, significa que ya nos
+      // hemos desbordado del mapa por la derecha. El módulo nos dice 
+      // básicamente por cuantas casillas nos hemos desbordado.
+      (colPosition + Slope.Right) % colWidth,
 
-        // Si el sitio al que llegamos tenía un árbol, incrementamos la cantidad
-        Point.isTree(content) ? foundTrees + 1 : foundTrees
-      );
+      // Si el sitio al que llegamos tenía un árbol, incrementamos la cantidad
+      Point.isTree(content) ? foundTrees + 1 : foundTrees
+    );
   }
 
   // Partimos en la posición en la esquina superior izquierda con 0 árboles encontrados
@@ -217,15 +217,15 @@ function run(input, slope) {
   const colWidth = rows[0].length;
 
   function goToNextRow(rows, colPosition, foundTrees) {
-      if (!rows[0]) return foundTrees;
+    if (!rows[0]) return foundTrees;
 
-      const content = rows[0][colPosition];
+    const content = rows[0][colPosition];
 
-      return goToNextRow(
-        rows.slice(slope.Down),
-        (colPosition + slope.Right) % colWidth,
-        Point.isTree(content) ? foundTrees + 1 : foundTrees
-      );
+    return goToNextRow(
+      rows.slice(slope.Down),
+      (colPosition + slope.Right) % colWidth,
+      Point.isTree(content) ? foundTrees + 1 : foundTrees
+    );
   }
 
   return goToNextRow(rows, 0, 0);
