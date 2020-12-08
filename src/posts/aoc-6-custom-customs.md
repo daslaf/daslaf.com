@@ -20,7 +20,7 @@ En este desafío nuestra data de entrada representa las respuestas positivas de 
 En la primera parte del desafío debemos encontrar la suma total de todas las respuestas positivas por grupo. Si dos o más integrantes de un grupo han respondido la misma pregunta de forma positiva, eso contaría como solo una respuesta positiva dentro del grupo.
 
 Considerando la siguiente data:
-```
+```text
 abc     | Grupo 1, 1 integrante   -> 3 respuestas ✅
 
 a       |

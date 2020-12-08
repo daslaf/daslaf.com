@@ -19,7 +19,7 @@ Este desafío consta en validar que cierta información de unos pasaportes esté
 
 Un archivo con la información de los pasaportes podría verse de la siguiente forma:
 
-```
+```text
 ecl:gry pid:860033327 eyr:2020 hcl:#fffffd
 byr:1937 iyr:2017 cid:147 hgt:183cm
 
