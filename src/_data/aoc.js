@@ -27,4 +27,8 @@ module.exports = [
     url: "../aoc-7-handy-haversacks",
     title: "Día 7 - Handy Haversacks"
   },
+  {
+    url: "../aoc-8-handheld-halting",
+    title: "Día 8 - Handheld Halting"
+  },
 ];
