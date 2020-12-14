@@ -31,4 +31,8 @@ module.exports = [
     url: "../aoc-8-handheld-halting",
     title: "Día 8 - Handheld Halting"
   },
+  {
+    url: "../aoc-9-encoding-error",
+    title: "Día 9 - Encoding Error"
+  },
 ];
