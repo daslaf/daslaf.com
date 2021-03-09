@@ -155,8 +155,4 @@ Y *voilá*. Como puedes ver, una implementación mínima de un *Store* a la redu
 
 Ya veremos en los próximos artículos por qué esto es tan importante.
 
----
-
-Y eso ha sido todo por hoy. Si te ha gustado el contenido, no te olvides de darle una compartida en Twitter y seguirme por [ahí](https://twitter.com/daslaf).
-
-En el próximo artículo veremos como implementar servicios *stateful* con streams reactivos. Gracias totales y hasta la próxima.
+{% include footer %}
